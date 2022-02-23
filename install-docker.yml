@@ -1,0 +1,10 @@
+---
+ - name: VKC install docker
+   hosts: oracle
+   become: yes
+   tasks:
+   - name: VKC yum install docker
+     yum:
+      name: docker
+      state: latest
+  

@@ -1,0 +1,12 @@
+[temp]
+10.0.0.131
+10.0.0.159
+10.0.0.227
+
+[temp:vars]
+ansible_connection=ssh
+ansible_user=mngr
+ansible_ssh_pass=ansible#manager
+
+[oracle]
+localh

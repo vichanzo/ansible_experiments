@@ -1,0 +1,28 @@
+---
+ - name: VKC install docker SWAG
+   hosts: oracle
+   become: yes
+   tasks:
+   - name: Install python-docker
+     pip:
+      name: docker
+      state: latest
+   - name: run docker linuxserver/swag
+     docker_container:
+      name: swag
+      ports:
+        - 80:80
+        - 443:443  
+#      cap_add:
+#        - NET_ADMIN
+      env:
+       PUID: "1000"
+       PGID: "1000"
+       TZ: "America/Los_Angeles"
+       URL: "iesha.duckdns.org"
+       VALIDATION: "http"
+       DUCKDNSTOKEN: "8944119b-c71b-4a0d-a12c-33c271e71c35" 
+      volumes:
+        - '/home/opc/swag:/config' 
+      restart_policy: unless-stopped
+      image: linuxserver/swag

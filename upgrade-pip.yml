@@ -1,0 +1,10 @@
+---
+ - name: VKC install pip
+   hosts: oracle
+   become: yes
+   tasks:
+   - name: pip self upgrade
+     pip:
+      name: pip
+      state: latest
+  

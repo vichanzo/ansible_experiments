@@ -1,0 +1,17 @@
+---
+ - name: VKC install basic packages
+   hosts: oracle
+   become: yes
+   tasks:
+   - name: yum install nano
+     yum:
+      name: nano
+      state: present
+   - name: yum install wget
+     yum:
+      name: wget
+      state: present
+   - name: yum install curl
+     yum:
+      name: curl
+      state: present  
