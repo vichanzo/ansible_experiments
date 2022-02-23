@@ -21,3 +21,8 @@ ansible-playbook <filename>.yml
 
 References:
 1) https://blog.risingstack.com/getting-started-with-ansible-infrastructure-automation/
+
+
+Todo:
+1) Figure out how to use ansible to download compose and ansible files from github and deploy tasks.
+See: https://www.middlewareinventory.com/blog/ansible-git-example/
